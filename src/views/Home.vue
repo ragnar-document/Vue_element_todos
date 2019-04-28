@@ -20,14 +20,6 @@
           </li>
         </ul>
       </el-main>
-      <el-footer>
-        <input class="allCheckbox" type="checkbox">
-        <ul>
-          <!-- <li><a href="/">全部</a></li>
-          <li><a href="/">待办/a></li>
-          <li><a href="/">已办</a></li> -->
-        </ul>
-      </el-footer>
     </el-container>
   </div>
 </template>
@@ -38,6 +30,7 @@ export default {
     return {
       input: '',
       radio: '',
+      filter: 'all',
       todos:[{
         id: 1,
         text: '测试一',
@@ -65,9 +58,14 @@ export default {
     switchover:function(item){
       let judge = item.judge;
       judge =  !judge;
+    },
+    showTodo:function(){
+      let filter = this.filter;
+      let showTodo = this.todos.filter
     }
   }
 }
+
 </script>
 
 <style>
@@ -88,9 +86,7 @@ li{
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
-.el-container .el-main{
-  border-bottom: 1px solid rgba(0, 0, 0, .2);
-}
+
 .el-input--suffix{
   height: 100%;
   line-height: 4;
@@ -136,7 +132,5 @@ li{
   transition: color 0.2s ease-out;
   cursor: pointer;
 }
-.allCheckbox{
 
-}
 </style>

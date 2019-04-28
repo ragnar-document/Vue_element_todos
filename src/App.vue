@@ -20,9 +20,5 @@ html{
   height: 100%;
   background: #4997e4;
 }
-a{
-  text-decoration: none;
-  color: #fff;
 
-}
 </style>
